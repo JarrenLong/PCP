@@ -1,0 +1,425 @@
+/* ======================================================== */
+/*	Created by Devit Schizoper 								*/
+/*	Created HomePages http://LoadFoo.starzonewebhost.com	*/
+/*	Created Day 01.12.2006 									*/
+/* ======================================================== */
+
+/* ======================================================== */
+/*  Modified for use by Long Technical Co. By Jarren Long   */
+/*  As displayed on: http://long-technical.com              */
+/*                                                          */
+/*  CHANGELOG:                                              */
+/*  1/24/2012 - jlong    Styled the calendar days for mouse */
+/*    states inactive, active, and hover                    */
+/*  1/22/2012 - jlong    Updated to CSS 3.0 compliance      */
+/*  1/13/2012 - jlong    Added styling for Contact Us,      */
+/*    Payroll, and Scheduling forms. Modified colors and    */
+/*    a few ID's for CSS 2.1 compliance.                    */
+/*  1/05/2012 - jlong    Modified original structure for    */
+/*    use with updated XHTML 1.1 layout. Removed excess     */
+/*    tags, and formatted sheet.                            */
+/*                                                          */
+/* ======================================================== */
+
+body {
+	margin: 0px;
+	background: url(../images/top_bg.gif);
+	background-repeat: repeat-x;
+	font-family: Verdana, Arial, sans-serif;
+    font-size: .6em;
+}
+
+p {
+	line-height: 17px;
+	margin: 11px 0 10px 0;
+	padding: 0px;
+}
+
+h2 {
+	color: #9f9f9f;
+	margin:0px;
+	padding:0px;
+	font-size: 15px;
+}
+
+ul {
+	font-size: 10px;
+	margin:0;
+	padding:0;
+	list-style-image: url(../images/bullet.gif);
+}
+
+a {
+	color: #93B300;
+	text-decoration: none;
+}
+
+a:hover {
+    color: #93B300;
+	text-decoration: underline;
+}
+
+blockquote{
+	background: #F7FDE3;
+	color: #606060;
+	padding: 10px;
+}
+
+
+/**** Main Container ***/
+#wrap {
+       margin-left: auto;
+       margin-right: auto;
+       width: 820px;
+}
+
+
+/**** Top ***/
+#top {
+	width: 100%;
+	height: 88px;
+	color: #FFFFFF;
+	background: #000 url(../images/top_bg.gif);
+	overflow:hidden;
+}
+
+#top h2 {
+	letter-spacing: 3px;
+	font-size: 2.4em;
+	font-weight: normal;
+	position: relative;
+	margin: 0px;
+	top:33px;
+	display:block;
+	float:left;
+	background: url(../images/bg_t.gif) no-repeat;
+	padding-left: 10px;
+}
+
+#top h2 a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/**** Main Menu ***/
+#menu {
+	display: block;
+	float:right;
+}
+
+#menu ul {
+	margin: 0;
+	list-style: none;
+}
+
+#menu li {
+	display: block;
+	float: left;
+	white-space: nowrap;
+}
+
+#menu li a {
+	display: block;
+	padding: 55px 20px 12px 20px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+* html #menu a {width:1%;}
+
+#menu li a:hover {
+	background: url(../images/bg_menu.gif);
+}
+
+#menu li a.current {
+	letter-spacing: 1px;
+	color: gray;
+	background: url(../images/bg_menu.gif);
+}
+/*
+#menu li a.current:hover {
+	color: #FFFFFF;
+}
+*/
+
+/**** Content Container ***/
+#content {
+	width: 100%;
+	margin-top:30px;
+}
+
+#content h2 {
+	margin: 0;
+	padding: 10px 0 10px 0;
+}
+
+.product_box {
+    width: 20%;
+	background: #F6F9FB;
+	border: 1px solid #E1E1E1;
+	padding: 10px 10px 0px 10px;
+	margin: 8px;
+    text-align: center;
+	float: left;
+	
+	max-height: 300px;
+    height: 300px;
+}
+
+.product_box_img {
+     margin: 2px;
+	 padding: 2px;
+	 max-height: 128px;
+	 border: 4px solid #E1E1E1;
+}
+
+.box {
+	background: #F6F9FB;
+	border: 1px solid #E1E1E1;
+	padding: 10px 10px 0px 10px;
+	margin: 0px 0 10px 0;
+}
+
+.box h2 {
+	font-size: 1.1em;
+	margin: 0px 0 0px 0;
+	padding:0px 0 5px 0;
+}
+
+.box a {
+	margin: 10px 0 10px 0;
+	color: #93B300;
+	font-size: 10px;
+}
+
+.box p {
+	margin: 5px 0 10px 0;
+	line-height: 15px;
+}
+
+.box ul {
+	padding: 0 0 7px 20px;
+	margin:10px 0 10px 0;
+}
+
+.box li {
+	margin-top:5px;
+}
+
+/**** Calendar - JLong ****/
+.calendar_small {
+	background: #F6F9FB;
+	border: 1px solid #E1E1E1;
+	padding: 10px;
+	margin: 0px 0 10px 0;
+	text-align: left;
+	float: left;
+	clear: none;
+}
+
+.calendar_large caption {
+	color: #9f9f9f;
+	margin:0px;
+	padding:0px;
+	font-size: 15px;
+}
+
+.calendar_small caption {
+	color: #9f9f9f;
+	margin:0px;
+	padding:0px;
+	font-size: 12px;
+}
+
+.calendar_small tr  {
+	font-size: 1.1em;
+	margin: 0px 0 0px 0;
+	padding: 0px;
+}
+
+.calendar_small td {
+	margin: 10px 0 10px 0;
+	color: #93B300;
+	font-size: 9px;
+}
+
+.calendar_large {
+	background: #F6F9FB;
+	border: 1px solid #E1E1E1;
+	padding: 10px;
+	margin: 0px 0 10px 0;
+	text-align: center;
+	float: right;
+	clear: none;
+}
+
+.calendar_large tr  {
+	font-size: 1.1em;
+	margin: 0px 0 0px 0;
+	padding: 0px;
+	border: 1px solid #E1E1E1;
+}
+
+.calendar_large td {
+	margin: 10px 0 10px 0;
+	padding: 0px 30px 30px 0px;
+	color: #93B300;
+	font-size: 10px;
+	border: 1px solid #E1E1E1;
+}
+
+.calendar_inactive {
+	color: #93B300;
+	background-color: #E1E1E1;
+}
+
+.calendar_today {
+	color: #93B300;
+	background-color: #C1C1C1;
+}
+
+.calendar_hover {
+    background-color: #E1E1E1;
+	color: #606060;
+}
+
+.calendar_footer  td {
+	margin: 0;
+}
+
+.calendar_footer a {
+    text-align: center;
+	text-decoration: none;
+	padding: 0 12px 0 12px;
+}
+
+/**** Payroll - JLong ****/
+.payroll {
+  width: 256px;
+  text-align: center;
+}
+
+.payroll #invoice_id {
+  width: 15%;
+}
+
+.payroll .time {
+  width: 15%;
+}
+
+.payroll .submit {
+  width: 33%;
+  float: right;
+}
+
+.payroll textarea {
+  width: 100%;
+}
+
+
+/**** Content ***/
+#left ul {
+	padding: 15px 0 15px 35px;
+	margin:0;
+}
+
+#left li {
+	margin-bottom:5px;
+}
+
+#left {
+	width: 70%;
+	float:left;
+	margin-left: 20px;
+	display: inline;
+}
+
+/**** Sidebar ***/
+#right {
+	width: 25%; 
+	float: right;
+	display:block;
+	margin-top: 10px;
+}
+
+#nav { list-style: none; margin: 2.0em 0; width: 25em; float: right;}
+#nav li { padding: 0; margin: 0; }
+#nav a {
+	display: block;
+	height: 2.0em;
+	padding: 0.3em 0.3em 0.3em 0.8em;
+	border-bottom: 2px; /*solid #1a1a1a*/
+	border-top: 2px; /*solid #1a1a1a*/
+	color: #93B300;
+	background-color: #F7F9FB;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#nav a:hover {
+	color: #1a1a1a;
+	background: url(../images/bg_t.gif) no-repeat;
+	font-weight: bold;
+}
+
+/**** Clear Div ***/
+.clear {
+	display: block;
+	clear: both;
+	width: 100%;
+	height:1px;
+	overflow:hidden;
+}
+
+
+/**** Footer ***/
+#footer {
+	margin: 40px auto 0 auto;
+	text-align: center;
+	border-top: dotted 1px gray;
+	padding: 20px 0 20px 0;
+	width: 70%;
+}
+
+#footer p {
+	margin: 0px;
+	padding: 0;
+}
+
+.center {
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
+
+
+/* LightBox2 Default CSS  ====================================================== */
+#lightbox{ position: absolute;	left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}
+#lightbox img{ width: auto; height: auto;}
+#lightbox a img{ border: none; }
+
+#outerImageContainer{ position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }
+#imageContainer{ padding: 10px; }
+
+#loading{ position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
+#hoverNav{ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+
+#prevLink, #nextLink{ width: 49%; height: 100%; display: block; }
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(../images/prevlabel.gif) left 15% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(../images/nextlabel.gif) right 15% no-repeat; }
+
+#imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100%	; }
+
+#imageData{	padding:0 10px; color: #666; }
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }
+#imageData #caption{ font-weight: bold;	}
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; outline: none;}
+
+#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }
